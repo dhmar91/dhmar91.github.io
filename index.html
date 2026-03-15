@@ -118,7 +118,6 @@
       border: 0;
     }
 
-    /* ⭐ BOTÓN REDONDO */
     .footer {
       display: flex;
       justify-content: flex-end;
@@ -142,11 +141,6 @@
       transform: translateY(-2px);
       box-shadow: 0 6px 18px rgba(79, 140, 255, 0.55);
     }
-
-    .demo-label {
-      color: var(--text-soft);
-      font-size: 0.9rem;
-    }
   </style>
 </head>
 
@@ -161,8 +155,10 @@
       </div>
     </header>
 
+    <!-- ⭐ SOLO UN MAIN -->
     <main>
-      <!-- PROYECTO SOLO DEMO -->
+
+      <!-- PROYECTO 1 -->
       <div class="project-card" data-id="gestion">
         <div class="project-title">Gestión v1 – Visualización</div>
 
@@ -176,18 +172,11 @@
         </div>
 
         <div class="project-video">
-          <iframe 
-            src="https://www.youtube.com/embed/-NDE05t1GMA"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/-NDE05t1GMA" allowfullscreen></iframe>
         </div>
       </div>
-    </main>
 
-
-    <main>
-      <!-- PROYECTO SOLO DEMO -->
+      <!-- PROYECTO 2 -->
       <div class="project-card" data-id="bingomusical">
         <div class="project-title">Generador Cartones Bingo Musical – Visualización</div>
 
@@ -201,18 +190,11 @@
         </div>
 
         <div class="project-video">
-          <iframe 
-            src="https://www.youtube.com/embed/V3BDwNCuv00"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/V3BDwNCuv00" allowfullscreen></iframe>
         </div>
       </div>
-    </main>
 
-
-    <main>
-      <!-- PROYECTO -->
+      <!-- PROYECTO 3 -->
       <div class="project-card" data-id="organizadorarchivos">
         <div class="project-title">Organizador de archivos v1.7.2 – Visualización y Descarga</div>
 
@@ -222,57 +204,23 @@
         </div>
 
         <div class="project-description">
-           Organizador de archivos por Año y MES, ideal para Fotos y vídeos, tiene opciones como evitar duplicados al organizar y buscar archivos duplicados.
+          Organizador de archivos por Año y MES, ideal para Fotos y vídeos, tiene opciones como evitar duplicados al organizar y buscar archivos duplicados.
         </div>
 
         <div class="project-video">
-          <iframe 
-            src="https://www.youtube.com/embed/Wf3TcNIbIFg"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+          <iframe src="https://www.youtube.com/embed/Wf3TcNIbIFg" allowfullscreen></iframe>
         </div>
 
-        <!-- ⭐ BOTÓN REDONDO CORRECTO -->
         <div class="footer">
           <a href="https://github.com/dhmar91/descargas" class="download-btn" target="_blank">
             Ir a Descargas
           </a>
         </div>
-
       </div>
+
     </main>
 
   </div>
-
-  <script>
-    const API = "https://estats.hardservers.net";
-
-    function contadorPagina() {
-      fetch(`${API}/INCCONTADOR?pagina`)
-        .then(() => fetch(`${API}/TOTALCONTADOR?pagina`))
-        .then(r => r.text())
-        .then(num => {
-          document.getElementById("page-views").textContent = num.trim();
-        });
-    }
-
-    function cargarContadores() {
-      document.querySelectorAll(".project-card").forEach(card => {
-        const id = card.dataset.id;
-        const span = card.querySelector(".downloads");
-
-        fetch(`${API}/TOTALCONTADOR?${id}`)
-          .then(r => r.text())
-          .then(num => span.textContent = num.trim());
-      });
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      contadorPagina();
-      cargarContadores();
-    });
-  </script>
 
 </body>
 </html>

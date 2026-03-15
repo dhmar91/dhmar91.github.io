@@ -223,5 +223,20 @@
 
   </div>
 
+  <script>
+    const API = "https://estats.hardservers.net";
+
+    function contadorPagina() {
+      fetch(`${API}/INCCONTADOR?pagina`)
+        .then(() => fetch(`${API}/TOTALCONTADOR?pagina`))
+        .then(r => r.text())
+        .then(num => {
+          document.getElementById("page-views").textContent = num.trim();
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", contadorPagina);
+  </script>
+
 </body>
 </html>

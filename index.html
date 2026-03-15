@@ -118,11 +118,29 @@
       border: 0;
     }
 
-    /* ⭐ BOTÓN A LA DERECHA */
+    /* ⭐ BOTÓN REDONDO */
     .footer {
       display: flex;
       justify-content: flex-end;
-      align-items: center;
+      margin-top: 10px;
+    }
+
+    .download-btn {
+      background: var(--accent);
+      color: white;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.25s;
+      border: 1px solid rgba(255,255,255,0.15);
+      box-shadow: 0 4px 14px rgba(79, 140, 255, 0.4);
+    }
+
+    .download-btn:hover {
+      background: #6fa0ff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(79, 140, 255, 0.55);
     }
 
     .demo-label {
@@ -194,7 +212,7 @@
 
 
     <main>
-      <!-- PROYECTO CON DESCARGA -->
+      <!-- PROYECTO -->
       <div class="project-card" data-id="organizadorarchivos">
         <div class="project-title">Organizador de archivos v1.7.2 – Visualización y Descarga</div>
 
@@ -204,7 +222,7 @@
         </div>
 
         <div class="project-description">
-          Organizador de archivos por Año y MES, ideal para Fotos y vídeos, tiene opciones como evitar duplicados al organizar y buscar archivos duplicados.
+           Organizador de archivos por Año y MES, ideal para Fotos y vídeos, tiene opciones como evitar duplicados al organizar y buscar archivos duplicados.
         </div>
 
         <div class="project-video">
@@ -215,11 +233,13 @@
           </iframe>
         </div>
 
+        <!-- ⭐ BOTÓN REDONDO -->
         <div class="footer">
-          <a href="https://github.com/dhmar91/descargas/" class="download-btn download-btn-link" download>
+          <a href="https://github.com/dhmar91/descargas/" class="download-btn" download>
             Ir a Descargas
           </a>
         </div>
+
       </div>
     </main>
 

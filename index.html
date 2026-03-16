@@ -33,30 +33,18 @@
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 28px;
-      flex-wrap: wrap;
-      gap: 12px;
+      margin-bottom: 20px;
     }
 
     header h1 {
-      font-size: 2.1rem;
-    }
-
-    .page-counter {
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      border: 1px solid var(--accent);
-      font-size: 0.85rem;
+      font-size: 2rem;
+      margin: 0;
     }
 
     main {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 18px;
     }
 
     .project-card {
@@ -64,83 +52,88 @@
       border-radius: var(--radius);
       border: 1px solid var(--border);
       padding: 18px;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
-      position: relative;
-      overflow: hidden;
-    }
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
 
-    .project-card::before {
-      content: "";
-      position: absolute;
-      inset: -40%;
-      background: radial-gradient(circle at top left, rgba(79, 140, 255, 0.18), transparent 55%);
-      opacity: 0.7;
+      display: flex;
+      flex-direction: column;
     }
 
     .project-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 6px;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
     }
 
     .tag {
       display: inline-block;
-      padding: 4px 10px;
+      padding: 3px 8px;
       background: var(--accent-soft);
       border: 1px solid var(--accent);
       border-radius: 999px;
-      font-size: 0.75rem;
-      margin-right: 6px;
+      font-size: 0.7rem;
+      margin-right: 4px;
     }
 
     .project-description {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--text-soft);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
+    /* ⭐ CONTENEDOR DE VIDEO FIJO */
     .project-video {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
+      width: 100%;
+      height: 200px;
       overflow: hidden;
       border-radius: 10px;
       border: 1px solid #22263a;
-      margin-bottom: 14px;
+      position: relative;
+      margin: 0 auto;
     }
 
     .project-video iframe {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
       width: 100%;
       height: 100%;
+      transform: translate(-50%, -50%);
       border: 0;
     }
 
-    /* ⭐ BOTÓN REDONDO */
+    /* ⭐ BLOQUE VIDEO + BOTÓN SIEMPRE AL FINAL */
+    .video-footer-wrapper {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
     .footer {
       display: flex;
-      justify-content: flex-end;
-      margin-top: 10px;
+      justify-content: center;
+    }
+
+    .download-btn,
+    .no-download-btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
     }
 
     .download-btn {
       background: var(--accent);
       color: white;
-      padding: 12px 22px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.25s;
       border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 4px 14px rgba(79, 140, 255, 0.4);
     }
 
-    .download-btn:hover {
-      background: #6fa0ff;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(79, 140, 255, 0.55);
+    .no-download-btn {
+      background: #ff4f4f;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.15);
+      opacity: 0.9;
+      cursor: not-allowed;
     }
   </style>
 </head>
@@ -150,18 +143,14 @@
   <div class="container">
 
     <header>
-      <h1>Proyectos de David</h1>
-      <div class="page-counter">
-        Visitas a la página: <span id="page-views">0</span>
-      </div>
+      <h1>Mis proyectos</h1>
     </header>
 
-    <!-- ⭐ SOLO UN MAIN -->
     <main>
 
       <!-- PROYECTO 1 -->
-      <div class="project-card" data-id="gestion">
-        <div class="project-title">Gestión v1 – Visualización</div>
+      <div class="project-card">
+        <div class="project-title">Gestión v1 (PRIVADO)</div>
 
         <div>
           <span class="tag">AutoIT</span>
@@ -172,14 +161,20 @@
           Programa de gestión para planificar vacaciones y ausencias, asignación de capacidades y secciones además de informes en pdf y filtros.
         </div>
 
-        <div class="project-video">
-          <iframe src="https://www.youtube.com/embed/-NDE05t1GMA" allowfullscreen></iframe>
+        <div class="video-footer-wrapper">
+          <div class="project-video">
+            <iframe src="https://www.youtube.com/embed/-NDE05t1GMA" allowfullscreen></iframe>
+          </div>
+
+          <div class="footer">
+            <span class="no-download-btn">No disponible</span>
+          </div>
         </div>
       </div>
 
       <!-- PROYECTO 2 -->
-      <div class="project-card" data-id="bingomusical">
-        <div class="project-title">Generador Cartones Bingo Musical – Visualización</div>
+      <div class="project-card">
+        <div class="project-title">Generador Cartones Bingo Musical (PRIVADO)</div>
 
         <div>
           <span class="tag">AutoIT</span>
@@ -190,14 +185,20 @@
           Generador de cartones de bingo musical: no debe haber más de una línea repetida ni cartones con bingo.
         </div>
 
-        <div class="project-video">
-          <iframe src="https://www.youtube.com/embed/V3BDwNCuv00" allowfullscreen></iframe>
+        <div class="video-footer-wrapper">
+          <div class="project-video">
+            <iframe src="https://www.youtube.com/embed/V3BDwNCuv00" allowfullscreen></iframe>
+          </div>
+
+          <div class="footer">
+            <span class="no-download-btn">No disponible</span>
+          </div>
         </div>
       </div>
 
       <!-- PROYECTO 3 -->
-      <div class="project-card" data-id="organizadorarchivos">
-        <div class="project-title">Organizador de archivos v1.7.2 – Visualización y Descarga</div>
+      <div class="project-card">
+        <div class="project-title">Organizador de archivos v1.7.2 (DESCARGABLE)</div>
 
         <div>
           <span class="tag">AutoIT</span>
@@ -208,35 +209,22 @@
           Organizador de archivos por Año y MES, ideal para Fotos y vídeos, tiene opciones como evitar duplicados al organizar y buscar archivos duplicados.
         </div>
 
-        <div class="project-video">
-          <iframe src="https://www.youtube.com/embed/Wf3TcNIbIFg" allowfullscreen></iframe>
-        </div>
+        <div class="video-footer-wrapper">
+          <div class="project-video">
+            <iframe src="https://www.youtube.com/embed/Wf3TcNIbIFg" allowfullscreen></iframe>
+          </div>
 
-        <div class="footer">
-          <a href="https://github.com/dhmar91/descargas" class="download-btn" target="_blank">
-            Ir a Descargas
-          </a>
+          <div class="footer">
+            <a href="https://github.com/dhmar91/descargas" class="download-btn" target="_blank">
+              Ir a Descargas
+            </a>
+          </div>
         </div>
       </div>
 
     </main>
 
   </div>
-
-  <script>
-    const API = "https://estats.hardservers.net";
-
-    function contadorPagina() {
-      fetch(`${API}/INCCONTADOR?pagina`)
-        .then(() => fetch(`${API}/TOTALCONTADOR?pagina`))
-        .then(r => r.text())
-        .then(num => {
-          document.getElementById("page-views").textContent = num.trim();
-        });
-    }
-
-    document.addEventListener("DOMContentLoaded", contadorPagina);
-  </script>
 
 </body>
 </html>

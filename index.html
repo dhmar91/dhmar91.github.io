@@ -79,7 +79,6 @@
       margin-bottom: 12px;
     }
 
-    /* ⭐ CONTENEDOR DE VIDEO FIJO */
     .project-video {
       width: 100%;
       height: 200px;
@@ -100,7 +99,6 @@
       border: 0;
     }
 
-    /* ⭐ BLOQUE VIDEO + BOTÓN SIEMPRE AL FINAL */
     .video-footer-wrapper {
       margin-top: auto;
       display: flex;
@@ -111,6 +109,7 @@
     .footer {
       display: flex;
       justify-content: center;
+      gap: 10px;
     }
 
     .download-btn,
@@ -134,6 +133,26 @@
       border: 1px solid rgba(255,255,255,0.15);
       opacity: 0.9;
       cursor: not-allowed;
+    }
+
+    /* ⭐ NUEVO BOTÓN "VER CÓDIGO FUENTE" */
+    .source-btn {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      background: #00c896;
+      color: white;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .source-btn::before {
+      content: "🧩";
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -247,8 +266,7 @@
             </a>
           </div>
         </div>
-	</div>
-
+      </div>
 
       <!-- PROYECTO 5 -->
       <div class="project-card">
@@ -272,6 +290,10 @@
             <a href="https://github.com/dhmar91/descargas" class="download-btn" target="_blank">
               Ir a Descargas
             </a>
+
+            <a href="https://github.com/dhmar91/source/blob/main/MCScriptv1.0.mrc" class="source-btn" target="_blank">
+              Ver código fuente
+            </a>
           </div>
         </div>
       </div>
@@ -282,7 +304,7 @@
 
         <div>
           <span class="tag">mIRC Scripting</span>
-          <span class="tag">2014</span>
+          <span class="tag">2007-2014</span>
         </div>
 
         <div class="project-description">
@@ -297,6 +319,10 @@
           <div class="footer">
             <a href="https://github.com/dhmar91/descargas" class="download-btn" target="_blank">
               Ir a Descargas
+            </a>
+
+            <a href="https://github.com/dhmar91/source/blob/main/MegaBOTv3.7script.mrc" class="source-btn" target="_blank">
+              Ver código fuente
             </a>
           </div>
         </div>

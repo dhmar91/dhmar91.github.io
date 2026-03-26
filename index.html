@@ -41,6 +41,22 @@
       margin: 0;
     }
 
+    /* Tarjeta Sobre mí */
+    .about-card {
+      background: linear-gradient(145deg, #0b0d18, #05060a);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 22px;
+      margin-bottom: 26px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+    }
+
+    .about-card p {
+      color: var(--text-soft);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
     main {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -135,7 +151,6 @@
       cursor: not-allowed;
     }
 
-    /* ⭐ NUEVO BOTÓN "VER CÓDIGO FUENTE" */
     .source-btn {
       padding: 10px 18px;
       border-radius: 999px;
@@ -161,12 +176,38 @@
 
   <div class="container">
 
-    <header>
-      <h1>Mis proyectos</h1>
+    <section class="about-card">
+      <h2 style="margin-top: 0; font-size: 1.4rem;">Sobre mí</h2>
+
+      <p>
+        Hola, me llamo <strong>David Hidalgo Marsal</strong>, nací en 1991 y tengo 35 años.
+        La programación es uno de mis mayores hobbies desde que era niño.
+      </p>
+
+      <p>
+        Descubrí este mundo a los 10 años gracias al <strong>mIRC scripting</strong>, un entorno que me atrapó desde el primer momento.
+        Me fascinaba poder crear cosas desde cero, especialmente bots y scripts que daban vida a mis ideas dentro de los canales de IRC.
+      </p>
+
+      <p>
+        Con el tiempo di el salto a <strong>Visual Basic 6.0</strong>, un lenguaje que me permitió estructurar mejor mis proyectos y profundizar en conceptos más avanzados.
+        Ese aprendizaje fue clave para que <strong>AutoIt</strong> me resultara muy natural: por primera vez podía crear mis propios ejecutables y trabajar con total independencia fuera del entorno de mIRC.
+      </p>
+
+      <p>
+        A lo largo de los años he experimentado con otros lenguajes, pero los que realmente domino en profundidad son
+        <strong>mIRC scripting</strong>, <strong>Visual Basic 6.0</strong> y <strong>AutoIt</strong>.
+        Cada uno marcó una etapa distinta de mi evolución como programador y me enseñó a pensar, resolver problemas y crear herramientas útiles desde cero.
+      </p>
+
+      <p><strong>Email:</strong> dhm@hotmail.es</p>
+    </section>
+
+      <header>
+    	 <h1>Mis proyectos</h1>
     </header>
 
     <main>
-
 
       <div class="project-card">
         <div class="project-title">YoutubeURL v1.0</div>
@@ -196,7 +237,6 @@
           </div>
         </div>
       </div>
-
 
       <div class="project-card">
         <div class="project-title">Gestión v1</div>
